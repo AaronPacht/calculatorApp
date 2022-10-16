@@ -1,0 +1,231 @@
+@font-face{
+    font-family: 'leagueSpartan';
+    src: url('font/LeagueSpartan-VariableFont_wght.ttf');
+    font-weight: 700;
+}
+
+:root {
+    --back: hsl(222, 26%, 31%);
+    --back2: hsl(224, 36%, 15%);
+    --back3: hsl(223, 31%, 20%);
+    --key: hsl(30, 25%, 89%);
+    --key2: hsl(225, 21%, 49%);
+    --key3: hsl(6, 63%, 50%);
+    --hover: hsl(0, 0%, 100%);
+    --hover2: hsl(225, 79%, 81%);
+    --hover3: hsl(6, 100%, 69%);
+    --shadow: hsl(28, 16%, 65%);
+    --shadow2: hsl(224, 28%, 35%);
+    --shadow3: hsl(6, 70%, 34%);
+    --text: hsl(221, 14%, 31%);
+    --text2: hsl(0, 0%, 100%);
+    --text3: hsl(0, 0%, 100%);
+    --text4: hsl(0, 0%, 100%);
+  }
+
+html{
+    height: 100%;
+}
+
+#body{
+    background-color: var(--back);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#grid{
+    display: grid;
+    grid-template-columns: 33.75em;
+    grid-template-rows: 3em 8em 30em;
+    grid-gap: 1.5em;
+}
+
+#main-box1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#big-white{
+    font-size: 2em;
+    color: var(--text2);
+    font-family: 'leagueSpartan';
+    margin: 10px;
+}
+
+#box1-right{
+    display: flex;
+    align-items: center;
+}
+
+#mode{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#theme{
+    margin: 0 2.5em;
+}
+
+#mode-numbers{
+    margin: 0 .5em;
+}
+
+.small-white{
+    font-size: .75em;
+    color: var(--text2);
+    font-family: 'leagueSpartan';
+    margin: 2px;
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+    background-color: var(--back3);
+    width: 4.25em;
+    height: 1em;
+    border-radius: 45px;
+    margin: 2px 0 15px 0;
+    border: 5.5px solid var(--back3);
+}
+
+input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: var(--key3);
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 45px;
+}
+
+input[type=range]::-webkit-slider-thumb:hover{
+    background-color: var(--hover3);
+}
+
+#main-box2{
+    background-color: var(--back2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#screen{
+    width: 90%;
+    height: 40%;
+    font-size: 55px;
+    color: var(--text2);
+    font-family: 'leagueSpartan';
+    text-align: end;
+}
+
+#main-box3{
+    background-color: var(--back3);
+    display: grid;
+    grid-template-columns: 6.25em 6.25em 6.25em 6.25em;
+    grid-template-rows: 3.75em 3.75em 3.75em 3.75em 3.75em;
+    grid-gap: 28px 26px;
+    align-content: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.button{
+    background-color: var(--key);
+    border-radius: 10px;
+    color: var(--text);
+    font-family: 'leagueSpartan';
+    font-size: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px var(--shadow);
+}
+
+.button:hover{
+    background-color: var(--hover);
+}
+
+.submit{
+    grid-column: span 2;
+    border-radius: 10px;
+    font-family: 'leagueSpartan';
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:hover, .submit:hover, input[type=range]:hover, 
+input[type=range]::-webkit-slider-thumb:hover{
+    cursor: pointer;
+}
+
+#reset{
+    background-color: var(--key2);
+    box-shadow: 0 2px var(--shadow2);
+    color: var(--text3);
+}
+
+#reset:hover, #del:hover{
+    background-color: var(--hover2);
+}
+
+#equal{
+    background-color: var(--key3);
+    box-shadow: 0 2px var(--shadow3);
+    color: var(--text4);
+}
+
+#equal:hover{
+    background-color: var(--hover3);
+}
+
+#del{
+    background-color: var(--key2);
+    box-shadow: 0 2px var(--shadow2);
+    color: var(--text3);
+    font-family: 'leagueSpartan';
+    font-size: 28px;
+}
+
+.attribution>a{
+    color: darkblue;
+}
+
+@media only screen and (max-width: 375px) {
+    #grid{
+        grid-template-columns: 21em;
+        grid-template-rows: 3em 6em 26em;
+    }
+
+    #main-box3{
+        grid-template-columns: 3.75em 3.75em 3.75em 3.75em;
+        grid-template-rows: 3.75em 3.75em 3.75em 3.75em 3.75em;
+        grid-gap: 1em;
+    }
+
+    .button, #del, #reset, #equal{
+        border-radius: 5px;
+    }
+
+    .submit, #del{
+        font-size: 20px;
+    }
+
+    .button{
+        font-size: 32px;
+    }
+
+    #screen{
+        font-size: 45px;
+    }
+  }

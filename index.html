@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="styles.js"></script>
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body id="body">
+
+  <div id="grid">
+    <div id="main-box1" class="main-box">
+      <p id="big-white">calc</p>
+      <div id="box1-right">
+        <span class="small-white" id="theme">THEME</span>
+        <div id="mode">
+          <p class="small-white">
+            <span id="mode-numbers">1</span>
+            <span id="mode-numbers">2</span>
+            <span id="mode-numbers">3</span>
+          </p>
+          <input type="range" step="50" value="0">
+        </div>
+      </div>
+    </div>
+    <div id="main-box2" class="main-box">
+      <p id="screen"></p>
+    </div>
+    <div id="main-box3" class="main-box">
+      <div class="button">7</div>
+      <div class="button">8</div>
+      <div class="button">9</div>
+      <div class="button" id="del">DEL</div>
+      <div class="button">4</div>
+      <div class="button">5</div>
+      <div class="button">6</div>
+      <div class="button">+</div>
+      <div class="button">1</div>
+      <div class="button">2</div>
+      <div class="button">3</div>
+      <div class="button">-</div>
+      <div class="button">.</div>
+      <div class="button">0</div>
+      <div class="button">/</div>
+      <div class="button">x</div>
+      <div class="submit" id="reset">RESET</div>
+      <div class="submit" id="equal">=</div>
+    </div>
+  </div>
+</body>
+
+<footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/AaronPacht">Aaron Pacht</a>.
+  </div>
+</footer>
+</html>
